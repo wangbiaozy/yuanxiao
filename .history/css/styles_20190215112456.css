@@ -1,0 +1,1271 @@
+html,
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background: url(../images/html_bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #c5241e;
+}
+html > section,
+body > section {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* @font-face{
+    font-family: 'myFont';
+    src: url('../font/myFont.ttf');
+} */
+.telephone {
+  color: #f3b64b;
+}
+img {
+  border: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+@-webkit-keyframes scaleDraw {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.1);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  75% {
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes scaleDraw {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes toRight {
+  0% {
+    -webkit-transform: translateX(-1.5rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes toRight {
+  0% {
+    transform: translateX(-1.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes toLeft {
+  0% {
+    -webkit-transform: translateX(1.5rem);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes toLeft {
+  0% {
+    transform: translateX(1.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/* loading */
+section#loader > div {
+  padding-top: 30%;
+}
+section#loader > div:nth-child(2) {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 2em;
+  text-align: center;
+  font-style: italic;
+  color: #ffffff;
+}
+section#loader > div:nth-child(3) {
+  box-sizing: border-box;
+  padding: 2px;
+  margin: 0 auto;
+  width: 15em;
+  height: .5em;
+  background-color: #f3b64b;
+  border-radius: .4em;
+}
+section#loader > div:nth-child(3) div {
+  width: 30%;
+  height: .24em;
+  border-radius: .4em;
+  background-color: #d67323;
+}
+/* 首页 */
+section.con {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: url(../images/html_bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #c5241e;
+}
+section.con div.yh {
+  position: absolute;
+}
+section.con div.yh.yh-1 {
+  top: 2.04rem;
+  left: 0;
+  width: 2.77rem;
+  height: 3.8rem;
+  background: url(../images/yh_1.png) center no-repeat;
+  background-size: cover;
+}
+section.con div.yh.yh-2 {
+  top: 4.28rem;
+  right: 0;
+  width: 2.06rem;
+  height: 2.42rem;
+  background: url(../images/yh_2.png) center no-repeat;
+  background-size: cover;
+}
+section.con main {
+  position: absolute;
+  top: .16rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 6.06rem;
+  height: 7.69rem;
+  background: url(../images/bg_1.png) center no-repeat;
+  background-size: cover;
+}
+section.con a.rule-btn {
+  position: absolute;
+  top: .14rem;
+  right: .14rem;
+  width: 1.39rem;
+  height: .49rem;
+  background: url(../images/rule_btn.png) center no-repeat;
+  background-size: cover;
+}
+section.con a.start-btn {
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 2.95rem;
+  height: 1.04rem;
+  background: url(../images/start_btn.png) center no-repeat;
+  background-size: cover;
+  -webkit-animation: scaleDraw 2s ease-in-out infinite;
+  animation: scaleDraw 2s ease-in-out infinite;
+}
+/* 活动规则 */
+section.rule,
+section.way {
+  display: none;
+  padding-top: .2rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: url(../images/html_bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #c5241e;
+}
+section.rule > div,
+section.way > div {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: .9rem;
+  width: 6rem;
+  height: 7.51rem;
+  background: url(../images/rule_box.png) center no-repeat;
+  background-size: cover;
+}
+section.rule > div ul,
+section.way > div ul {
+  overflow: scroll;
+  margin: 0 auto;
+  width: 5.34rem;
+  height: 5.84rem;
+}
+section.rule > div ul::-webkit-scrollbar,
+section.way > div ul::-webkit-scrollbar {
+  display: none;
+}
+section.rule > div ul li,
+section.way > div ul li {
+  font-size: .24rem;
+  color: #000000;
+}
+section.rule > div ul li h3,
+section.way > div ul li h3 {
+  line-height: 2em;
+}
+section.rule > div ul li p,
+section.way > div ul li p {
+  text-indent: 2em;
+  line-height: 1.6em;
+  text-align: justify;
+}
+section.rule > a,
+section.way > a {
+  margin: .14rem auto 0;
+  display: block;
+  width: 2.95rem;
+  height: 1.04rem;
+  background: url(../images/qd_btn_green.png) center no-repeat;
+  background-size: cover;
+}
+/* 发送好友弹窗 */
+section.tofriend {
+  display: none;
+  position: fixed;
+  top: .8rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 4.31rem;
+  z-index: 200;
+}
+section.tofriend > div {
+  box-sizing: border-box;
+  width: 4.31rem;
+}
+section.tofriend > div:nth-child(1) {
+  padding-top: 3.7rem;
+  height: 4.16rem;
+  background: url(../images/tofriend_bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #c5241e;
+}
+section.tofriend > div:nth-child(1) img {
+  position: absolute;
+  top: .44rem;
+  right: 50%;
+  width: auto;
+  height: 3.1rem;
+}
+section.tofriend > div:nth-child(1) img.friend {
+  right: auto;
+  left: 50%;
+}
+section.tofriend > div:nth-child(1) p {
+  font-family: 'myFont';
+  font-size: .34rem;
+  text-align: center;
+  color: #ffdb13;
+}
+section.tofriend > div:nth-child(2) {
+  padding: .22rem 0;
+  background-color: #ffffff;
+}
+section.tofriend > div:nth-child(2) div {
+  padding: 0 .14rem .1rem;
+  display: flex;
+  align-items: center;
+}
+section.tofriend > div:nth-child(2) div img {
+  margin-right: .18rem;
+  width: .48rem;
+  height: .48rem;
+  background-color: #ebebeb;
+}
+section.tofriend > div:nth-child(2) div p {
+  font-size: .18rem;
+  color: #010101;
+}
+section.tofriend > div:nth-child(2) p {
+  font-size: .24rem;
+  line-height: 1.6em;
+  text-align: center;
+  color: #000000;
+}
+section.tofriend > div:nth-child(2) p span {
+  display: inline-block;
+  width: 6em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ed2121;
+}
+section.tofriend > div:nth-child(2) a {
+  display: block;
+  margin: .18rem auto 0;
+  width: 2.95rem;
+  height: 1.04rem;
+}
+section.tofriend > div:nth-child(2) a.share-btn {
+  background: url(../images/tofriend_btn.png) center no-repeat;
+  background-size: cover;
+}
+section.tofriend > div:nth-child(2) a.fri-pbtn {
+  background: url(../images/fri-btn-1.png) center no-repeat;
+  background-size: cover;
+}
+section.tofriend > div:nth-child(2) a.qd-btn {
+  background: url(../images/qd_red.png) center no-repeat;
+  background-size: cover;
+}
+section.tofriend a.close {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: .39rem;
+  height: .39rem;
+  background: url(../images/close.png) center no-repeat;
+  background-size: cover;
+}
+/* 拼花灯交互页 */
+section.jigsaw {
+  display: none;
+  position: fixed;
+  top: .5rem;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  z-index: 200;
+}
+section.jigsaw div.box {
+  position: relative;
+  margin: 0 auto;
+  width: 5rem;
+  height: 5.3rem;
+}
+section.jigsaw div.box img {
+  position: absolute;
+  width: auto;
+  height: 5.3rem;
+}
+section.jigsaw div.box img:nth-child(1) {
+  right: 50%;
+  -webkit-animation: toRight 1s 1 linear;
+  animation: toRight 1s 1 linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+section.jigsaw div.box img:nth-child(2) {
+  left: 50%;
+  -webkit-animation: toLeft 1s 1 linear;
+  animation: toLeft 1s 1 linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+section.jigsaw div.text {
+  padding-top: .5rem;
+}
+section.jigsaw div.text p {
+  font-size: .36rem;
+  line-height: 1.6em;
+  text-align: center;
+  color: #ffffff;
+}
+section.jigsaw div.text p:nth-child(2) {
+  font-size: .24rem;
+}
+section.jigsaw div.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: .2rem;
+}
+section.jigsaw div.logo img {
+  width: auto;
+  height: .6rem;
+}
+section.jigsaw div.logo p {
+  font-family: 'myFont';
+  font-size: .4rem;
+  line-height: 2em;
+  text-align: center;
+  color: yellow;
+}
+/* 分享提示 */
+section.share-message {
+  display: none;
+  position: fixed;
+  top: .24rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 5.7rem;
+  height: 2.53rem;
+  background: url(../images/share-message.png) center no-repeat;
+  background-size: cover;
+  z-index: 200;
+}
+/* 制作海报页 */
+section.make {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: url(../images/html_bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #c5241e;
+}
+section.make > a {
+  position: absolute;
+}
+section.make > a:nth-child(1) {
+  top: .14rem;
+  left: .22rem;
+  width: 1.9rem;
+  height: .49rem;
+  background: url(../images/make-btn.png) center no-repeat;
+  background-size: cover;
+}
+section.make > a:nth-child(2) {
+  top: .14rem;
+  right: .14rem;
+  width: 1.39rem;
+  height: .49rem;
+  background: url(../images/rule_btn.png) center no-repeat;
+  background-size: cover;
+}
+section.make > div > ul.user-photo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: .8rem;
+  width: 5.3rem;
+}
+section.make > div > ul.user-photo li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #ffffff;
+}
+section.make > div > ul.user-photo li img {
+  width: 1.08rem;
+  height: 1.08rem;
+  background-color: #ebebeb;
+}
+section.make > div > ul.user-photo li p {
+  position: absolute;
+  left: -0.3rem;
+  bottom: -0.4rem;
+  width: 1.8rem;
+  text-align: center;
+  font-size: .18rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+}
+section.make > div div.pdpic-box {
+  position: absolute;
+  top: .32rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 3rem;
+  height: 2.2rem;
+}
+section.make > div div.pdpic-box img {
+  position: absolute;
+  height: 100%;
+}
+section.make > div div.pdpic-box img.my-hd {
+  right: 50%;
+}
+section.make > div div.pdpic-box img.suc-friend {
+  left: 50%;
+}
+section.make > div div.pdmess-box {
+  padding-top: .5rem;
+  text-align: center;
+}
+section.make > div div.pdmess-box > div:nth-child(1) {
+  display: none;
+  margin-bottom: .2rem;
+  -webkit-animation: scaleDraw 2s ease-in-out infinite;
+  animation: scaleDraw 2s ease-in-out infinite;
+}
+section.make > div div.pdmess-box > div:nth-child(1) p {
+  font-size: .24rem;
+  line-height: 2em;
+  color: #ffffff;
+}
+section.make > div div.pdmess-box > div:nth-child(1) p span {
+  color: #f4cf23;
+}
+section.make > div div.pdmess-box > div:nth-child(2) p {
+  font-size: .24rem;
+  line-height: 1.4em;
+  color: #000000;
+}
+section.make > div div.pdmess-box > div:nth-child(2) a {
+  display: block;
+  margin: 0 auto .1rem;
+  width: 2.95rem;
+  height: 1.04rem;
+  background: url(../images/cj_btn.png) center no-repeat;
+  background-size: cover;
+  -webkit-animation: scaleDraw 2s ease-in-out infinite;
+  animation: scaleDraw 2s ease-in-out infinite;
+}
+section.make > div div.pdmess-box > div:nth-child(2) a.act {
+  background: url(../images/cj_btn_1.png) center no-repeat;
+  background-size: cover;
+}
+section.make > div div.pdmess-box > div:nth-child(3) {
+  display: none;
+  box-sizing: border-box;
+  margin: .1rem auto;
+  padding-top: .5rem;
+  width: 5.52rem;
+  height: 1.59rem;
+  background: url(../images/fail_mess_box.png) center no-repeat;
+  background-size: cover;
+  -webkit-animation: scaleDraw 2s ease-in-out infinite;
+  animation: scaleDraw 2s ease-in-out infinite;
+}
+section.make > div div.pdmess-box > div:nth-child(3) p {
+  font-size: .28rem;
+  letter-spacing: .1em;
+  line-height: 1.5em;
+  color: #000000;
+}
+section.make > div div.pdmess-box > div:nth-child(3) p span {
+  color: #f21c1c;
+}
+section.make > div div.record-box {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 1rem;
+  width: 6rem;
+  height: 4.91rem;
+  background: url(../images/record_box.png) center no-repeat;
+  background-size: cover;
+}
+section.make > div div.record-box > p {
+  display: none;
+  padding-top: 1rem;
+  font-size: .3rem;
+  text-align: center;
+  line-height: 1.6em;
+  color: #cacaca;
+}
+section.make > div div.record-box > ul {
+  margin: 0 auto;
+  overflow: scroll;
+  width: 5.2rem;
+  height: 3.14rem;
+}
+section.make > div div.record-box > ul::-webkit-scrollbar {
+  display: none;
+}
+section.make > div div.record-box > ul li {
+  position: relative;
+  margin-bottom: .3rem;
+  width: 5.2rem;
+  height: .5rem;
+}
+section.make > div div.record-box > ul li img {
+  position: absolute;
+  top: .01rem;
+  left: 0;
+  width: .48rem;
+  height: .48rem;
+  background-color: #ebebeb;
+}
+section.make > div div.record-box > ul li p {
+  position: relative;
+  width: 3.2rem;
+  padding-left: .7rem;
+  font-size: .18rem;
+  line-height: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000000;
+}
+section.make > div div.record-box > ul li p:nth-child(2) {
+  margin-bottom: .1rem;
+}
+section.make > div div.record-box > ul li p span:nth-child(2) {
+  position: absolute;
+  right: .05rem;
+  font-weight: bold;
+}
+section.make > div div.record-box > ul li a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.09rem;
+  height: .49rem;
+  background: url(../images/record_look_btn.png) center no-repeat;
+  background-size: cover;
+}
+section.make > div div.record-box > ul li > i {
+  display: none;
+}
+/* 专属二维码弹窗 */
+section.can-code {
+  position: fixed;
+  top: .14rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 4.3rem;
+  z-index: -1;
+}
+section.can-code > a:last-child {
+  position: absolute;
+  top: .2rem;
+  left: -0.8rem;
+  width: .5rem;
+  height: .5rem;
+  background: url(../images/close_1.png) center no-repeat;
+  background-size: cover;
+}
+section.can-code > div:nth-child(1) {
+  margin-left: -0.1rem;
+  margin-bottom: .3rem;
+  width: 5.13rem;
+  height: 2.15rem;
+  background: url(../images/share-message.png) center no-repeat;
+  background-size: cover;
+}
+section.can-code div.pic {
+  position: relative;
+  width: 4.3rem;
+  height: 5.84rem;
+  /* background: url(../images/codeBg.png) center no-repeat;
+        background-size: cover; */
+  background-color: #c5241e;
+}
+section.can-code div.pic > img.bg {
+  width: 100%;
+  height: 100%;
+}
+section.can-code div.pic div.box {
+  position: absolute;
+  top: 1.4rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 3.6rem;
+  height: 3rem;
+}
+section.can-code div.pic div.box img.my-hd {
+  position: absolute;
+  right: 50%;
+  top: 0;
+  height: 2.84rem;
+}
+section.can-code div.pic div.box img.sr-hd {
+  position: absolute;
+  left: 52%;
+  top: 0;
+  height: 2.84rem;
+}
+section.can-code div.pic div.box p {
+  font-family: 'myFont';
+  position: absolute;
+  padding-left: .2rem;
+  top: .6rem;
+  width: .28rem;
+  font-size: .28rem;
+  color: #ffca41;
+}
+section.can-code div.pic div.code {
+  position: absolute;
+  right: .2rem;
+  bottom: .2rem;
+  width: 1.26rem;
+  height: 1.26rem;
+  z-index: 10;
+}
+section.can-code div.pic div.code img {
+  display: block;
+  width: 1.26rem;
+  height: 1.26rem;
+}
+section.can-code div.pic > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4.3rem;
+  height: 5.84rem;
+}
+section.can-code > p {
+  font-size: .26rem;
+  text-align: center;
+  line-height: 1.8em;
+  color: #ffffff;
+}
+/* 查看拼花灯成功&失败页 */
+section.look-result {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: url(../images/html_bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #c5241e;
+}
+section.look-result > a:nth-child(1) {
+  position: absolute;
+  top: .14rem;
+  right: .14rem;
+  width: 1.39rem;
+  height: .49rem;
+  background: url(../images/rule_btn.png) center no-repeat;
+  background-size: cover;
+}
+section.look-result ul.user {
+  display: flex;
+  justify-content: space-between;
+  padding-top: .8rem;
+  margin: 0 auto;
+  width: 4rem;
+}
+section.look-result ul.user li {
+  position: relative;
+}
+section.look-result ul.user li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #ffffff;
+}
+section.look-result ul.user li div img {
+  width: 1.08rem;
+  height: 1.08rem;
+  background-color: #ebebeb;
+}
+section.look-result ul.user li p {
+  position: absolute;
+  left: -0.3rem;
+  bottom: -0.5rem;
+  width: 1.8rem;
+  text-align: center;
+  font-size: .18rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+}
+section.look-result div.box {
+  position: relative;
+  margin: .4rem auto 0;
+  width: 5.22rem;
+  height: 3.84rem;
+}
+section.look-result div.box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 5.21rem;
+  height: 5.21rem;
+  background: url(../images/guang.png) center no-repeat;
+  background-size: cover;
+}
+section.look-result div.box img {
+  position: absolute;
+  top: -0.1rem;
+  width: auto;
+  height: 3.94rem;
+}
+section.look-result div.box img:nth-child(2) {
+  right: 2.61rem;
+}
+section.look-result div.box img:nth-child(3) {
+  left: 2.61rem;
+}
+section.look-result div.text {
+  padding-top: .2rem;
+}
+section.look-result div.text p {
+  font-size: .24rem;
+  line-height: 1.6em;
+  text-align: center;
+  color: #ffffff;
+}
+section.look-result div.text p:nth-child(1) {
+  font-size: .36rem;
+}
+section.look-result div.text.fail {
+  display: none;
+}
+section.look-result > a:last-child {
+  display: block;
+  margin: .1rem auto;
+  width: 2.95rem;
+  height: 1.04rem;
+  background: url(../images/qd_btn_green.png) center no-repeat;
+  background-size: cover;
+  -webkit-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+/* 未关注公众号引导页 */
+section.yindao {
+  display: none;
+  padding-top: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: url(../images/html_bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #c5241e;
+}
+section.yindao > p {
+  font-size: .3rem;
+  line-height: 1.8em;
+  text-align: center;
+  color: #ffffff;
+}
+section.yindao > p span {
+  color: yellow;
+}
+section.yindao div img {
+  display: block;
+  margin: .4rem auto .2rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+section.yindao div p {
+  font-size: .2rem;
+  text-align: center;
+  color: #ffffff;
+}
+/* 异网弹窗 */
+section.ywtc {
+  position: fixed;
+  top: 1.55rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 6.06rem;
+  z-index: 200;
+}
+section.ywtc > a:first-child {
+  position: absolute;
+  top: 0;
+  right: .8rem;
+  width: .39rem;
+  height: .39rem;
+  background: url(../images/close.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc > div {
+  box-sizing: border-box;
+  padding-top: 2.15rem;
+}
+section.ywtc > div > p {
+  font-size: .24rem;
+  text-align: center;
+  color: #fffefe;
+}
+section.ywtc > div > p.telephone {
+  color: #f4e821;
+}
+section.ywtc > div > p span {
+  color: #f4e821;
+}
+section.ywtc.zhongjiang {
+  display: none;
+}
+section.ywtc.zhongjiang > div {
+  width: 6.06rem;
+  height: 5.81rem;
+  background: url(../images/ywtc_bg_1.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.zhongjiang > div > p {
+  line-height: 1.8em;
+}
+section.ywtc.zhongjiang > div > p span {
+  color: #f4e821;
+}
+section.ywtc.zhongjiang > img:last-child {
+  position: absolute;
+  top: 5.8rem;
+  left: -0.17rem;
+  width: 6.4rem;
+  height: auto;
+}
+section.ywtc.zhuanzeng {
+  display: none;
+}
+section.ywtc.zhuanzeng > div {
+  width: 6.06rem;
+  height: 5.96rem;
+  background: url(../images/ywtc_bg_2.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.zhuanzeng > div > p {
+  line-height: 2em;
+}
+section.ywtc.zhuanzeng > div > p span {
+  color: #f21e1e;
+}
+section.ywtc.zhuanzeng > div > p:last-child {
+  font-size: .18rem;
+}
+section.ywtc.zhuanzeng > a {
+  position: absolute;
+}
+section.ywtc.zhuanzeng > a:nth-child(3) {
+  top: 5.6rem;
+  left: .65rem;
+  width: 2.16rem;
+  height: .91rem;
+  background: url(../images/ywtc_btn_2.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.zhuanzeng > a:nth-child(4) {
+  top: 5.6rem;
+  right: .65rem;
+  width: 2.16rem;
+  height: .91rem;
+  background: url(../images/ywtc_btn_3.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.dhm {
+  display: none;
+}
+section.ywtc.dhm > div {
+  width: 6.06rem;
+  height: 5.96rem;
+  background: url(../images/ywtc_bg_2.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.dhm > div > p {
+  line-height: 2em;
+}
+section.ywtc.dhm > div > p span {
+  color: #f3b64b;
+}
+section.ywtc.dhm > div > p:last-child {
+  font-size: .18rem;
+}
+section.ywtc.dhm > div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1.2rem;
+  height: .4rem;
+  font-size: .18rem;
+  background-color: #f3b64b;
+  color: #ffffff;
+}
+section.ywtc.dhm > div a.act {
+  color: #333;
+  background-color: #ccc;
+}
+section.ywtc.dhm > a {
+  position: absolute;
+}
+section.ywtc.dhm > a:nth-child(3) {
+  top: 5.6rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 3.54rem;
+  height: 1.04rem;
+  background: url(../images/ywtc_btn_11.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.tel {
+  display: none;
+}
+section.ywtc.tel > div {
+  width: 6.06rem;
+  height: 5.24rem;
+  background: url(../images/ywtc_bg_3.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.tel > div > p {
+  font-size: .3rem;
+  line-height: 1.6em;
+}
+section.ywtc.tel > div > p:last-child {
+  font-size: .18rem;
+}
+section.ywtc.tel > div div {
+  display: flex;
+  margin: .2rem auto;
+  width: 4.9rem;
+}
+section.ywtc.tel > div div p {
+  font-size: .3rem;
+  color: #ffffff;
+}
+section.ywtc.tel > div div input {
+  box-sizing: border-box;
+  padding: 0 .2rem;
+  width: 3.25rem;
+  height: .52rem;
+  border: 2px solid #ec6941;
+  background-color: #ffffff;
+}
+section.ywtc.tel > div div input::-webkit-outer-spin-button,
+section.ywtc.tel > div div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+section.ywtc.tel > div div input[type="number"] {
+  -moz-appearance: textfield;
+}
+section.ywtc.tel > a:nth-child(3) {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 2.95rem;
+  height: 1.04rem;
+  background: url(../images/ywtc_btn_1.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.queren {
+  display: none;
+}
+section.ywtc.queren > div {
+  width: 6.06rem;
+  height: 5.53rem;
+  background: url(../images/ywtc_bg_4.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.queren > div > p {
+  line-height: 1.6em;
+}
+section.ywtc.queren > div > p:last-child {
+  font-size: .18rem;
+  line-height: 2em;
+}
+section.ywtc.queren > a:nth-child(3) {
+  position: absolute;
+  top: 5.2rem;
+  left: .65rem;
+  width: 2.16rem;
+  height: .91rem;
+  background: url(../images/ywtc_btn_4.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.queren > a:nth-child(4) {
+  position: absolute;
+  top: 5.2rem;
+  right: .65rem;
+  width: 2.16rem;
+  height: .91rem;
+  background: url(../images/ywtc_btn_3.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.over {
+  display: none;
+}
+section.ywtc.over > div {
+  width: 6.06rem;
+  height: 6.14rem;
+  background: url(../images/ywtc_bg_5.png) center no-repeat;
+  background-size: cover;
+}
+section.ywtc.over > div > p {
+  line-height: 1.6em;
+}
+section.ywtc.over > img {
+  position: absolute;
+  top: 6rem;
+  left: -0.17rem;
+  width: 6.4rem;
+  height: auto;
+}
+/* 领奖提示 */
+section.ljts {
+  display: none;
+  padding-top: .22rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background: url(../images/html_bg.png) center no-repeat;
+  background-size: cover;
+  background-color: #c5241e;
+  z-index: 200;
+}
+section.ljts > div:nth-child(1) {
+  margin: 0 auto;
+  width: 6.06rem;
+  height: 2.2rem;
+  background: url(../images/ljts.png) center no-repeat;
+  background-size: cover;
+}
+section.ljts > div:nth-child(2) {
+  box-sizing: border-box;
+  margin: .15rem auto .2rem;
+  padding-top: .8rem;
+  width: 6rem;
+  height: 2.91rem;
+  background: url(../images/ljts_1.png) center no-repeat;
+  background-size: cover;
+}
+section.ljts > div:nth-child(2) > p {
+  font-size: .3rem;
+  line-height: 1.6em;
+  text-align: center;
+  color: #000000;
+}
+section.ljts > div:nth-child(2) > p span {
+  color: #ed2121;
+}
+section.ljts > div:nth-child(3) {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 5.94rem;
+  height: .8rem;
+  border: 2px solid #000000;
+  border-radius: .1rem;
+}
+section.ljts > div:nth-child(3) input {
+  box-sizing: border-box;
+  padding: 0 .2rem 0 1rem;
+  width: 100%;
+  height: 100%;
+  font-size: .3rem;
+  border: 4px solid #990b04;
+}
+section.ljts > div:nth-child(3) i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: .22rem;
+  margin: auto;
+  width: .31rem;
+  height: .47rem;
+  background: url(../images/sj_icon.png) center no-repeat;
+  background-size: cover;
+}
+section.ljts > div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: .2rem auto;
+  width: 5.94rem;
+}
+section.ljts > div:nth-child(4) > div {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 3.78rem;
+  height: .8rem;
+  border: 2px solid #000000;
+  border-radius: .1rem;
+}
+section.ljts > div:nth-child(4) > div input {
+  box-sizing: border-box;
+  padding: 0 .2rem;
+  width: 100%;
+  height: 100%;
+  font-size: .3rem;
+  border: 4px solid #990b04;
+}
+section.ljts > div:nth-child(4) > input {
+  width: 2.07rem;
+  height: .84rem;
+  border: none;
+  font-size: .3rem;
+  color: #000000;
+  background: url(../images/yzm_btn.png) center no-repeat;
+  background-size: cover;
+}
+section.ljts > div.tips {
+  display: none;
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: .5rem 0;
+  margin: auto;
+  width: 5rem;
+  height: 6rem;
+  border-radius: .1rem;
+  background-color: #ffffff;
+  z-index: 200;
+}
+section.ljts > div.tips ul {
+  margin: 0 auto;
+  overflow: scroll;
+  width: 4rem;
+  height: 5rem;
+}
+section.ljts > div.tips ul li {
+  font-size: .24rem;
+  text-align: justify;
+  line-height: 1.8em;
+}
+section.ljts > div.tips > a {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  width: .49rem;
+  height: .49rem;
+  background: url(../images/close.png) center no-repeat;
+  background-size: cover;
+}
+section.ljts > a.submit {
+  display: block;
+  margin: 0 auto;
+  width: 2.37rem;
+  height: .84rem;
+  background: url(../images/ljts_btn.png) center no-repeat;
+  background-size: cover;
+}
+section.ljts > a.other {
+  display: block;
+  width: 100%;
+  font-size: .24rem;
+  line-height: .7rem;
+  text-decoration: underline;
+  text-align: center;
+  color: #ffffff;
+}
+/* 遮罩层 */
+section.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+}

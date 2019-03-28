@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <style>
+        section.tc>div{
+            position: fixed;
+            top: 20%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            box-sizing: border-box;
+            padding-top: .7rem;
+            width: 5.44rem;
+            height: 5.44rem;
+            border-radius: .2rem;
+            background-color: #ffffff;
+            z-index: 200;
+        }
+        section.tc>div>div{
+            position: relative;
+            margin: 0 auto .4rem;
+            width: 4.48rem;
+            height: .8rem;
+        }
+        section.tc>div>div input[type="text"],section.tc>div input[type="number"]{
+            box-sizing: border-box;
+            padding: 0 .2rem;
+            width: 4.48rem;
+            height: .8rem;
+            font-size: .3rem;
+            border-radius: .2rem;
+            border: none;
+            background-color: #f2f2f2;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        input[type="number"]{
+            -moz-appearance: textfield;
+        }
+        section.tc>div>div input[type="button"]{
+            position: absolute;
+            right: .1rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 1.82rem;
+            height: .6rem;
+            font-size: .24rem;
+            color: #ffffff;
+            border: none;
+            border-radius: .1rem;
+            background-color: #36a4ea;
+        }
+        section.tc>div>p{
+            font-size: .26rem;
+            text-align: center;
+            line-height: 1.5em;
+            color: #ff0000;
+        }
+        section.tc>div>a:last-child{
+            display: block;
+            margin: .5rem auto 0;
+            width: 4.13rem;
+            height: 1.01rem;
+            background: url(./images/btn_3.png) center no-repeat;
+            background-size: cover;
+        }
+        section.tc>div i{
+            position: fixed;
+            top: 15%;
+            left: 0;
+            width: 7.5rem;
+            height: 8.23rem;
+            background: url(./images/tc_2.png) center no-repeat;
+            background-size: cover;
+            z-index: 150;
+        }
+
+        section.mask{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.8);
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <section class="tc">
+        <div>
+            <div>
+                <input type="number" pattern="[0-9]*" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入您的手机号">
+            </div>
+            <div>
+                <input type="text" placeholder="请输入验证码">
+                <input id="codeBtn" type="button" value="发送验证码">
+            </div>
+            <p>请输入正确的内容后开始点击确定</p>
+            <a href="javascript:void(0)"></a>
+        </div>
+        <i></i>
+    </section>
+    <!-- 遮罩层 -->
+    <section class="mask" id="mask"></section>
+</body>
+</html>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+
+    //获取验证码
+    function getCodeStyle(btnId) {
+        var orderTime = 60,
+            timeLeft = orderTime,
+            btn = btnId;
+        function timeCount(){
+            timeLeft-=1;
+            if (timeLeft>0){
+                btn.val(timeLeft+"s重新获取");
+                setTimeout(timeCount,1000);
+                btn.css({
+                    background: '#a2a2a2',
+                    color: '#ffffff'
+                });
+            }
+            else {
+                btn.val("发送验证码");
+                btn.css({
+                    background: '#76ca08',
+                    color: '#ffffff'
+                });
+                timeLeft = orderTime;
+                btn.removeAttr("disabled");
+            }
+        }
+        btn.on('click', function () {
+            $(this).attr("disabled",true);
+            timeCount();
+        });
+    }
+    getCodeStyle($('#codeBtn'));
+
+    showMask();
+    //显示遮罩层
+    function showMask(){
+        $("#mask").css("height",$(document).height());
+        $("#mask").css("width",$(document).width());
+        $("#mask").show();
+        $('body').css('position','fixed');
+    }
+    //隐藏遮罩层
+    function hideMask(){
+        $("#mask").hide();
+        $('body').css('position','unset');
+    }
+</script>

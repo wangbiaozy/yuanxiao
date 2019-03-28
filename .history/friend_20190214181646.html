@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>北京移动</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <script src="js/less-1.7.0.min.js"></script> -->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/imgLoader.js"></script>
+    <script>
+        imgLoader([
+        'images/bg_1.png',
+            'images/cj_btn.png',
+            'images/cj_btn_1.png',
+            'images/close.png',
+            'images/code-pic.png',
+            'images/codeBg.png',
+            'images/erweima.png',
+            'images/fail_mess_box.png',
+            'images/fri-btn-1.png',
+            'images/guang.png',
+            'images/html_bg.png',
+            'images/l_1.png',
+            'images/l_2.png',
+            'images/l_3.png',
+            'images/l_4.png',
+            'images/l_5.png',
+            'images/l_6.png',
+            'images/l_7.png',
+            'images/l_8.png',
+            'images/l_9.png',
+            'images/ljts_1.png',
+            'images/ljts_btn.png',
+            'images/ljts.png',
+            'images/make-btn.png',
+            'images/qd_btn_green.png',
+            'images/qd_red.png',
+            'images/qqt_logo.png',
+            'images/r_1.png',
+            'images/r_2.png',
+            'images/r_3.png',
+            'images/r_4.png',
+            'images/r_5.png',
+            'images/r_6.png',
+            'images/r_7.png',
+            'images/r_8.png',
+            'images/r_9.png',
+            'images/record_box.png',
+            'images/record_look_btn.png',
+            'images/rule_box.png',
+            'images/rule_btn.png',
+            'images/share-message.png',
+            'images/sj_icon.png',
+            'images/start_btn.png',
+            'images/tofriend_bg.png',
+            'images/tofriend_btn.png',
+            'images/user_photo_default.png',
+            'images/yh_1.png',
+            'images/yh_2.png',
+            'images/ywtc_bg_1.png',
+            'images/ywtc_bg_2.png',
+            'images/ywtc_bg_3.png',
+            'images/ywtc_bg_4.png',
+            'images/ywtc_bg_5.png',
+            'images/ywtc_btn_1.png',
+            'images/ywtc_btn_2.png',
+            'images/ywtc_btn_3.png',
+            'images/ywtc_btn_4.png',
+            'images/yzm_btn.png'
+        ], function (percentage) {
+            var percentT = percentage * 100;
+            $('#loader_info').html('Loading ' + (parseInt(percentT)) + '%');
+            $('#loader_progress')[0].style.width = percentT + '%';
+            $('#can-code').hide();
+            if (percentage == 1) {
+                $('#loader').hide();
+                $('.con').show();
+                $('#can-code').show();
+                $('#tofriend').show();
+                $("#mask").css("height",$(document).height());
+                $("#mask").css("width",$(document).width());
+                $("#mask").show();
+            }
+        });
+    </script>
+</head>
+<body>
+    <!--loading-->
+    <section id="loader" class="loader">
+        <div>
+            <!-- <img src="./images/girl.gif" alt=""> -->
+        </div>
+        <div id="loader_info" class="loader_info"></div>
+        <div>
+            <div id="loader_progress" class="loader_progress"></div>
+        </div>
+    </section>
+
+    <!-- 首页 -->
+    <section id="con" class="con">
+        <div class="yh yh-1"></div>
+        <div class="yh yh-2"></div>
+        <main></main>
+        <a href="javascript:void(0)" class="rule-btn rb-0"></a>
+        <a href="javascript:void(0)" class="start-btn" id="start-btn"></a>
+
+        <!-- 测试按钮 -->
+        <a style="position:absolute;z-index:300;" href="#" class="test1">未关注微信公众号</a>
+        <a style="position:absolute;z-index:300;top:.5rem;" href="#" class="test2">有自己的灯</a>
+        <a style="position:absolute;z-index:300;top:1rem;" href="#" class="test3">拼灯成功</a>
+    </section>
+
+    <!-- 好友入口页 -->
+    <section class="tofriend" id="tofriend">
+        <div>
+            <img class="friend" src="./images/r_1.png" alt="">
+            <p class="frihd-name"></p>
+        </div>
+        <div>
+            <!-- <div>
+                <img class="fri-photo" src="./images/user_photo_default.png" alt="">
+                <p>昵称昵称昵称昵称</p>
+            </div> -->
+            <p>我获得了<span class="frihd-name"></span></p>
+            <p>快来跟我匹配</p>
+            <p>首次完成100分匹配</p>
+            <p>有机会抽取<span>10GB</span>哦~</p>
+            <a href="javascript:void(0)" class="fri-pbtn" id="fri-pbtn"></a>
+        </div>
+    </section>
+
+    <!-- 活动规则 -->
+    <section class="rule" id="rule">
+        <div>
+            <ul>
+                <li>
+                    <h3>一 活动时间：</h3>
+                    <p>即日起——2月22日</p>
+                    <h3>二 活动介绍：</h3>
+                    <p style="text-indent: 2em;">活动期间，用户通过北京移动微信公众号，可参与“元宵佳节-花灯大赏”活动。每个用户通过活动可获得半个专属花灯，用户可邀请好友与自己拼花灯。好友通过邀请页面参与匹配，双方图案相同即为成功。成功后，双方均可获得1次抽奖机会（每个用户仅在第一次成功匹配后可获得1次抽奖机会）。未匹配成功的用户无法获得抽奖机会。<br>北京移动用户抽中流量奖品后，自动充入关注绑定账户。<br>非北京移动用户抽中流量奖品后可以转赠给北京移动手机号码。</p>
+                    <h3>三 奖品规则：</h3>
+                    <p>活动奖品包含：100MB、200MB、500MB、1GB、10GB全国流量及部分免费业务体验资格、优惠业务办理资格。</p>
+                    <p>（一）流量奖品</p>
+                    <p>1.流量档位包括100MB、200MB、500MB、1GB、10GB全国流量；</p>
+                    <p>2.奖品将于领取后15日内，自动充入用户的微信关注绑定手机号，流量自充入日起生效，有效期至本月月末；</p>
+                    <p>3.活动赠送套外国内流量，优先级低于主套餐、可选包、短促包、定向流量包等，赠送流量无法共享，不可结转；</p>
+                    <p>4.处于保留期、保号期、挂失、申停、欠停、转品牌过渡期的手机号；物联网卡、4G超级日租卡套餐、神州行开心听、语音套餐卡、神州行B标准资费基本策划等特殊资费用户无法领取赠送流量；</p>
+                    <p>5.赠送流量每月仅可领取100次，超出上限不可领取。</p>
+                    <p>（二）其它奖品</p>
+                    <p>规则详见各奖品办理页面</p>
+                    <p>温馨提示：活动将于2月22日结束，请您务必于活动结束前完成领奖，逾期视为自动放弃奖品。</p>
+                </li>
+            </ul>
+        </div>
+        <a href="javascript: void(0)" class="gohome"></a>
+    </section>
+
+    <!-- 与好友拼花灯弹窗 -->
+    <section class="tofriend" id="gethd">
+        <div>
+            <img class="my-hd" src="" alt="">
+            <p class="hd-name"></p>
+        </div>
+        <div>
+            <p>恭喜您获得了</p>
+            <p><span class="hd-name"></span></p>
+            <p>快去和好友拼花灯</p>
+            <p>首次完成100分匹配时</p>
+            <p>有机会获得<span>10GB流量</span>哦~</p>
+            <a href="javascript:void(0)" class="qd-btn" id="qd-btn"></a>
+        </div>
+    </section>
+
+    <!-- 拼花灯交互页 -->
+    <section class="jigsaw" id="jigsaw">
+        <div class="box">
+            <img class="my-hd" src="./images/l_1.png" alt="">
+            <img class="friend" src="./images/r_1.png" alt="">
+        </div>
+        <div class="text">
+            <p>缘分值：<span class="percent"></span></p>
+            <p class="desc"></p>
+        </div>
+        <div class="logo">
+            <img src="./images/qqt_logo.png" alt="">
+        </div>
+    </section>
+
+    <!-- 分享提示浮层 -->
+    <section class="share-message" id="share-message"></section>
+
+
+    <!-- 未关注公众号引导页 -->
+    <section class="yindao" id="yindao">
+        <p>亲爱的用户</p>
+        <p>元宵节拼花灯活动</p>
+        <p>联通、电信的小伙伴们统统可以参加啦！</p>
+        <p>扫码关注微信参加活动</p>
+        <p>有机会获得<span>10GB流量和惊喜大奖</span>!</p>
+        <div>
+            <img src="./images/erweima.png" alt="">
+            <p>长按图片—识别图中二维码—关注公众号</p>
+            <p>在【优惠】菜单中可查看微厅近期活动哦~</p>
+        </div>
+    </section>
+
+   
+
+    <!-- 遮罩层 -->
+    <section id="mask" class="mask"></section>
+</body>
+</html>
+<script src="js/html2canvas.min.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/index.js"></script>
